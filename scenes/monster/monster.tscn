@@ -1,0 +1,157 @@
+[gd_scene load_steps=21 format=3 uid="uid://dnuse0ixqu71y"]
+
+[ext_resource type="Texture2D" uid="uid://dbjk3maymnwnr" path="res://resource/Actor/Monsters/Cyclope/SpriteSheet.png" id="1_4q6ng"]
+[ext_resource type="Script" path="res://scenes/monster/monster.gd" id="1_x8yvf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anb1i"]
+atlas = ExtResource("1_4q6ng")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qni1"]
+atlas = ExtResource("1_4q6ng")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfj7k"]
+atlas = ExtResource("1_4q6ng")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsg4x"]
+atlas = ExtResource("1_4q6ng")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jq8y"]
+atlas = ExtResource("1_4q6ng")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p82lp"]
+atlas = ExtResource("1_4q6ng")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ea035"]
+atlas = ExtResource("1_4q6ng")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2ta6"]
+atlas = ExtResource("1_4q6ng")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrrky"]
+atlas = ExtResource("1_4q6ng")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l58d7"]
+atlas = ExtResource("1_4q6ng")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5uda"]
+atlas = ExtResource("1_4q6ng")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yt240"]
+atlas = ExtResource("1_4q6ng")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fv8ht"]
+atlas = ExtResource("1_4q6ng")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqmyi"]
+atlas = ExtResource("1_4q6ng")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucvyg"]
+atlas = ExtResource("1_4q6ng")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpwkf"]
+atlas = ExtResource("1_4q6ng")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_thbkv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anb1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qni1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfj7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsg4x")
+}],
+"loop": true,
+"name": &"moe_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jq8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p82lp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ea035")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2ta6")
+}],
+"loop": true,
+"name": &"move_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrrky")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l58d7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5uda")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yt240")
+}],
+"loop": true,
+"name": &"move_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fv8ht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqmyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucvyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpwkf")
+}],
+"loop": true,
+"name": &"move_up",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_elrnc"]
+radius = 13.0384
+
+[node name="Monster" type="RigidBody2D"]
+script = ExtResource("1_x8yvf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -17)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_thbkv")
+animation = &"move_left"
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -14)
+shape = SubResource("CircleShape2D_elrnc")
+metadata/_edit_group_ = true
