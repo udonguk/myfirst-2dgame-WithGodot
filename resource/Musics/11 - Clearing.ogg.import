@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://kyma4skod6qn"
+path="res://.godot/imported/11 - Clearing.ogg-aae697f2a59c63ff532fd8c593a0c9ba.oggvorbisstr"
+
+[deps]
+
+source_file="res://resource/Musics/11 - Clearing.ogg"
+dest_files=["res://.godot/imported/11 - Clearing.ogg-aae697f2a59c63ff532fd8c593a0c9ba.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

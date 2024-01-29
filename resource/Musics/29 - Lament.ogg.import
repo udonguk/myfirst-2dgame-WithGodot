@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cjrcfqc3gn0p2"
+path="res://.godot/imported/29 - Lament.ogg-88d0dafa3bcbe15e43575119ae960c6d.oggvorbisstr"
+
+[deps]
+
+source_file="res://resource/Musics/29 - Lament.ogg"
+dest_files=["res://.godot/imported/29 - Lament.ogg-88d0dafa3bcbe15e43575119ae960c6d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b4250y2jkw22s"
+path="res://.godot/imported/18 - Aquatic.ogg-bc0cf8f292ff5bfa1d4a896ace831985.oggvorbisstr"
+
+[deps]
+
+source_file="res://resource/Musics/18 - Aquatic.ogg"
+dest_files=["res://.godot/imported/18 - Aquatic.ogg-bc0cf8f292ff5bfa1d4a896ace831985.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

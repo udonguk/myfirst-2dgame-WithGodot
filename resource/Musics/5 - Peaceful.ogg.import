@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://codw64basveeb"
+path="res://.godot/imported/5 - Peaceful.ogg-56f9733fa2fc74c6bf55a12137dfef6c.oggvorbisstr"
+
+[deps]
+
+source_file="res://resource/Musics/5 - Peaceful.ogg"
+dest_files=["res://.godot/imported/5 - Peaceful.ogg-56f9733fa2fc74c6bf55a12137dfef6c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

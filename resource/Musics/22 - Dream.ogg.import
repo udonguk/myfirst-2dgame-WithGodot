@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bluxh1f75x0su"
+path="res://.godot/imported/22 - Dream.ogg-3e722b236f911125ff33af1fd602d5e0.oggvorbisstr"
+
+[deps]
+
+source_file="res://resource/Musics/22 - Dream.ogg"
+dest_files=["res://.godot/imported/22 - Dream.ogg-3e722b236f911125ff33af1fd602d5e0.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

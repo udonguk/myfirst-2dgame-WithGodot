@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bhevnp5oxck2g"
+path="res://.godot/imported/23 - Road.ogg-4f464c5735ad79aba10dac42a163951a.oggvorbisstr"
+
+[deps]
+
+source_file="res://resource/Musics/23 - Road.ogg"
+dest_files=["res://.godot/imported/23 - Road.ogg-4f464c5735ad79aba10dac42a163951a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
