@@ -192,13 +192,14 @@ radius = 11.0
 height = 29.0
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 0
 script = ExtResource("1_wvt7g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_b2lud")
 animation = &"move_down"
-frame_progress = 0.749746
+frame_progress = 0.556007
 offset = Vector2(0, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

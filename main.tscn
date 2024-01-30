@@ -7,18 +7,22 @@
 [node name="Main" type="Node"]
 script = ExtResource("1_3nyki")
 
+[node name="Monster2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_rfoff")]
+position = Vector2(292, 135)
+target = NodePath("../Player")
+
+[node name="Monster" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_rfoff")]
+position = Vector2(67, 70)
+target = NodePath("../Player")
+
+[node name="Monster3" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_rfoff")]
+position = Vector2(113, 430)
+target = NodePath("../Player")
+
+[node name="Monster4" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_rfoff")]
+position = Vector2(250, 351)
+target = NodePath("../Player")
+
 [node name="Player" parent="." instance=ExtResource("2_g6ep2")]
 position = Vector2(139, 175)
 scale = Vector2(2, 2)
-
-[node name="Monster2" parent="." instance=ExtResource("3_rfoff")]
-position = Vector2(292, 135)
-
-[node name="Monster" parent="." instance=ExtResource("3_rfoff")]
-position = Vector2(67, 70)
-
-[node name="Monster3" parent="." instance=ExtResource("3_rfoff")]
-position = Vector2(113, 430)
-
-[node name="Monster4" parent="." instance=ExtResource("3_rfoff")]
-position = Vector2(250, 351)
