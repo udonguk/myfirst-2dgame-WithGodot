@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dadyjxsmhelyp"]
+
+[ext_resource type="Script" path="res://scenes/manager/monster_manager.gd" id="1_v0klo"]
+
+[node name="MonsterManager" type="Node"]
+script = ExtResource("1_v0klo")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true

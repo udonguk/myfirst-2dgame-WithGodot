@@ -1,28 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://duv6w2ll1b3go"]
+[gd_scene load_steps=5 format=3 uid="uid://duv6w2ll1b3go"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_3nyki"]
 [ext_resource type="PackedScene" uid="uid://bpkalyhx7thyx" path="res://scenes/player/player.tscn" id="2_g6ep2"]
-[ext_resource type="PackedScene" uid="uid://dnuse0ixqu71y" path="res://scenes/monster/monster.tscn" id="3_rfoff"]
+[ext_resource type="PackedScene" uid="uid://dnuse0ixqu71y" path="res://scenes/monster/monster.tscn" id="3_p11pe"]
+[ext_resource type="PackedScene" uid="uid://dadyjxsmhelyp" path="res://scenes/manager/monster_manager.tscn" id="4_m77mv"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_3nyki")
 
-[node name="Monster2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_rfoff")]
-position = Vector2(292, 135)
-target = NodePath("../Player")
-
-[node name="Monster" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_rfoff")]
-position = Vector2(67, 70)
-target = NodePath("../Player")
-
-[node name="Monster3" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_rfoff")]
-position = Vector2(113, 430)
-target = NodePath("../Player")
-
-[node name="Monster4" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_rfoff")]
-position = Vector2(250, 351)
-target = NodePath("../Player")
-
 [node name="Player" parent="." instance=ExtResource("2_g6ep2")]
 position = Vector2(139, 175)
 scale = Vector2(2, 2)
+
+[node name="Monster" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_p11pe")]
+position = Vector2(68, 76)
+target = NodePath("../Player")
+
+[node name="MonsterManager" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_m77mv")]
+player = NodePath("../Player")
+monster_scene = ExtResource("3_p11pe")

@@ -23,6 +23,8 @@ func play_animation(direction: Vector2) -> void:
 		animation_2d.stop()
 
 func _physics_process(_delta):
+	if(target == null):
+		return
 	var direction = position.direction_to(target.global_position)
 	play_animation(direction)
 	linear_velocity = direction * move_speed

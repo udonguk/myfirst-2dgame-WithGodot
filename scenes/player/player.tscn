@@ -199,7 +199,7 @@ script = ExtResource("1_wvt7g")
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_b2lud")
 animation = &"move_down"
-frame_progress = 0.556007
+frame_progress = 0.961937
 offset = Vector2(0, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
