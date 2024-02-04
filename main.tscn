@@ -12,10 +12,6 @@ script = ExtResource("1_3nyki")
 position = Vector2(139, 175)
 scale = Vector2(2, 2)
 
-[node name="Monster" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_p11pe")]
-position = Vector2(68, 76)
-target = NodePath("../Player")
-
 [node name="MonsterManager" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_m77mv")]
 player = NodePath("../Player")
 monster_scene = ExtResource("3_p11pe")
