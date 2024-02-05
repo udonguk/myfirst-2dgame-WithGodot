@@ -26,5 +26,6 @@ func _physics_process(_delta):
 	if(target == null):
 		return
 	var direction = position.direction_to(target.global_position)
-	play_animation(direction)
+	# play_animation(direction)
+	Common.play_animation_by_direction(direction, animation_2d)
 	linear_velocity = direction * move_speed
