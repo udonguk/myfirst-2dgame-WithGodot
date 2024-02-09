@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7d71j4fq8rg0"]
+
+[ext_resource type="Script" path="res://scenes/player/AttackManager.gd" id="1_34tcb"]
+[ext_resource type="Script" path="res://scenes/player/MeleeHitBox.gd" id="2_18ldx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k8r0t"]
+radius = 18.2879
+
+[node name="AttackManager" type="Node"]
+script = ExtResource("1_34tcb")
+
+[node name="MeleeHitBox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_18ldx")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeHitBox"]
+position = Vector2(0, -11)
+scale = Vector2(3.5, 3.5)
+shape = SubResource("CircleShape2D_k8r0t")
+debug_color = Color(0.858824, 0.270588, 0.619608, 0.419608)
+metadata/_edit_group_ = true
+
+[node name="AttackRate" type="Timer" parent="."]
+autostart = true

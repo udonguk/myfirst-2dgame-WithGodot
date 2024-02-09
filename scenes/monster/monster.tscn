@@ -1,7 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://dnuse0ixqu71y"]
+[gd_scene load_steps=22 format=3 uid="uid://dnuse0ixqu71y"]
 
 [ext_resource type="Texture2D" uid="uid://dbjk3maymnwnr" path="res://resource/Actor/Monsters/Cyclope/SpriteSheet.png" id="1_4q6ng"]
 [ext_resource type="Script" path="res://scenes/monster/monster.gd" id="1_x8yvf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ycvgs"]
+radius = 18.0278
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2jq8y"]
 atlas = ExtResource("1_4q6ng")
@@ -145,6 +148,14 @@ radius = 13.0384
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_x8yvf")
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0, -14)
+shape = SubResource("CircleShape2D_ycvgs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -17)

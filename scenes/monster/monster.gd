@@ -10,17 +10,6 @@ func _ready():
 	add_to_group("monsters")
 	gravity_scale = 0 # 중력제거
 
-func play_animation(direction: Vector2) -> void:
-	if direction.y > 0 :
-		animation_2d.play("move_down")
-	elif direction.y < 0:
-		animation_2d.play("move_up")
-	elif direction.x > 0:
-		animation_2d.play("move_right")
-	elif direction.x < 0:
-		animation_2d.play("move_left")
-	else:
-		animation_2d.stop()
 
 func _physics_process(_delta):
 	if(target == null):
