@@ -31,9 +31,6 @@ func on_timer_timeout():
 
 	var attackNode2D = animation_scene.instantiate() as Node2D
 	attackNode2D.global_position = player.global_position
-	var direction  = attackNode2D.position.direction_to(close_enemy[0].position)
-	print(direction)
-	# attackNode2D.rotation = direction
 	attackNode2D.look_at(close_enemy[0].global_position)
 
 	get_parent().add_child(attackNode2D)
