@@ -7,7 +7,6 @@ func _ready():
 
 
 func on_area_entered(area: Area2D):
-	print('attacked')
 	if !area.get_parent().is_in_group("monsters"):
 		return
 	

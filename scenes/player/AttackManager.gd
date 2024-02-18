@@ -21,7 +21,7 @@ func on_timer_timeout():
 	var close_enemy = meleeHitBox.get_overlapping_areas()
 	if close_enemy.size() == 0 :
 		return
-	
+		
 	close_enemy.sort_custom(func(a: Node2D, b: Node2D):
 		var a_distance = a.global_position.distance_squared_to(player.global_position)
 		var b_distance = b.global_position.distance_squared_to(player.global_position)
@@ -32,5 +32,4 @@ func on_timer_timeout():
 	var attackNode2D = animation_scene.instantiate() as Node2D
 	attackNode2D.global_position = player.global_position
 	attackNode2D.look_at(close_enemy[0].global_position)
-
 	get_parent().add_child(attackNode2D)

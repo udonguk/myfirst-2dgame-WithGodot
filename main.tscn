@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://duv6w2ll1b3go"]
+[gd_scene load_steps=7 format=3 uid="uid://duv6w2ll1b3go"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_3nyki"]
 [ext_resource type="PackedScene" uid="uid://bpkalyhx7thyx" path="res://scenes/player/player.tscn" id="2_g6ep2"]
 [ext_resource type="PackedScene" uid="uid://dnuse0ixqu71y" path="res://scenes/monster/monster.tscn" id="3_p11pe"]
 [ext_resource type="PackedScene" uid="uid://dadyjxsmhelyp" path="res://scenes/manager/monster_manager.tscn" id="4_m77mv"]
 [ext_resource type="PackedScene" uid="uid://c7d71j4fq8rg0" path="res://scenes/manager/attack_manager.tscn" id="5_wklql"]
+[ext_resource type="PackedScene" uid="uid://c8bwoopu2xl2" path="res://scenes/components/fx/floating_text.tscn" id="6_j40vg"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_3nyki")
@@ -18,3 +19,5 @@ monster_scene = ExtResource("3_p11pe")
 
 [node name="AttackManager" parent="." node_paths=PackedStringArray("player") instance=ExtResource("5_wklql")]
 player = NodePath("../Player")
+
+[node name="FloatingText" parent="." instance=ExtResource("6_j40vg")]

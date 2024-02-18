@@ -55,7 +55,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8i0ot"]
-size = Vector2(53, 64)
+size = Vector2(62, 64)
 
 [node name="SlashCurvedAttack" type="Node2D"]
 script = ExtResource("1_l8bs3")
@@ -79,5 +79,5 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 visible = false
-position = Vector2(35.5, 0)
+position = Vector2(31, 0)
 shape = SubResource("RectangleShape2D_8i0ot")

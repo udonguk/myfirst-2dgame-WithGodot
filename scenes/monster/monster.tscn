@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://dnuse0ixqu71y"]
+[gd_scene load_steps=24 format=3 uid="uid://dnuse0ixqu71y"]
 
 [ext_resource type="Texture2D" uid="uid://dbjk3maymnwnr" path="res://resource/Actor/Monsters/Cyclope/SpriteSheet.png" id="1_4q6ng"]
 [ext_resource type="Script" path="res://scenes/monster/monster.gd" id="1_x8yvf"]
-[ext_resource type="Script" path="res://scenes/monster/HurtBox.gd" id="2_t5rkb"]
+[ext_resource type="PackedScene" uid="uid://bcc4xlry1jmje" path="res://scenes/components/health/health.tscn" id="2_i4nnb"]
+[ext_resource type="Script" path="res://scenes/monster/hurt_box.gd" id="3_mqbw0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ycvgs"]
 radius = 18.0278
@@ -150,10 +151,13 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_x8yvf")
 
-[node name="HurtBox" type="Area2D" parent="."]
+[node name="Health" parent="." instance=ExtResource("2_i4nnb")]
+
+[node name="HurtBox" type="Area2D" parent="." node_paths=PackedStringArray("health")]
 collision_layer = 2
 collision_mask = 0
-script = ExtResource("2_t5rkb")
+script = ExtResource("3_mqbw0")
+health = NodePath("../Health")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(0, -14)
