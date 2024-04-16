@@ -1,8 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://bpkalyhx7thyx"]
+[gd_scene load_steps=30 format=3 uid="uid://bpkalyhx7thyx"]
 
 [ext_resource type="Texture2D" uid="uid://d3ygjnkwujrmb" path="res://resource/Actor/Characters/BlueNinja/SeparateAnim/Idle.png" id="1_27a84"]
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_wvt7g"]
 [ext_resource type="Texture2D" uid="uid://dglug5cnsy5oh" path="res://resource/Actor/Characters/BlueNinja/SeparateAnim/Walk.png" id="2_lx5yf"]
+[ext_resource type="PackedScene" uid="uid://cte7skejk7rfg" path="res://scenes/components/gather_box/gather_area_2d.tscn" id="4_l1fmh"]
+[ext_resource type="Script" path="res://scenes/player/GatherSpotArea2D.gd" id="5_6hwan"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_td16h"]
 atlas = ExtResource("1_27a84")
@@ -191,6 +193,12 @@ animations = [{
 radius = 11.0
 height = 29.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_1rcq8"]
+radius = 27.0046
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v64m1"]
+radius = 2.54951
+
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(2, 2)
 collision_mask = 0
@@ -206,3 +214,19 @@ offset = Vector2(0, -8)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -14)
 shape = SubResource("CapsuleShape2D_363vn")
+
+[node name="GatherArea2D" parent="." instance=ExtResource("4_l1fmh")]
+collision_layer = 0
+collision_mask = 4
+
+[node name="GatherAreaCollisionShape2D" type="CollisionShape2D" parent="GatherArea2D"]
+position = Vector2(0, -14)
+shape = SubResource("CircleShape2D_1rcq8")
+
+[node name="GatherSpotArea2D" type="Area2D" parent="."]
+collision_mask = 4
+script = ExtResource("5_6hwan")
+
+[node name="GatherSpotCollisionShape2D" type="CollisionShape2D" parent="GatherSpotArea2D"]
+position = Vector2(0, -14)
+shape = SubResource("CircleShape2D_v64m1")

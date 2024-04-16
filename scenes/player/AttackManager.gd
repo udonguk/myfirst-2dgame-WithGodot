@@ -14,7 +14,7 @@ func _ready():
 func _process(delta):
 	$MeleeHitBox.global_position = player.global_position - Vector2(0, 14)
 
-
+≤
 func on_timer_timeout():
 	if(!is_instance_valid(meleeHitBox)):
 		return

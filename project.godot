@@ -32,6 +32,7 @@ project/assembly_name="My-first-2d"
 
 2d_physics/layer_1="player"
 2d_physics/layer_2="monster"
+2d_physics/layer_3="items"
 
 [rendering]
 

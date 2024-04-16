@@ -3,9 +3,11 @@ extends CharacterBody2D
 var speed = 400
 
 @onready var player_animation_2d = get_node("AnimatedSprite2D") as AnimatedSprite2D
+@onready var body_collision_shape_2d: CollisionShape2D = $CollisionShape2D
 
-# func _ready():
-# 	$MelleArea2D.body_entered.connect(on_area_enterd)
+func _ready():
+	#body_collision_shape_2d.connect()
+	pass
 
 
 func get_input():
@@ -21,3 +23,6 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	move_and_slide()
+
+func body_entered():
+	pass

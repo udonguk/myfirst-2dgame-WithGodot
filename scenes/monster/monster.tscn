@@ -1,8 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://dnuse0ixqu71y"]
+[gd_scene load_steps=25 format=3 uid="uid://dnuse0ixqu71y"]
 
 [ext_resource type="Texture2D" uid="uid://dbjk3maymnwnr" path="res://resource/Actor/Monsters/Cyclope/SpriteSheet.png" id="1_4q6ng"]
 [ext_resource type="Script" path="res://scenes/monster/monster.gd" id="1_x8yvf"]
 [ext_resource type="PackedScene" uid="uid://bcc4xlry1jmje" path="res://scenes/components/health/health.tscn" id="2_i4nnb"]
+[ext_resource type="PackedScene" uid="uid://bgt7ypro1fwrn" path="res://scenes/edible/medi_pack_item.tscn" id="2_k4kms"]
 [ext_resource type="Script" path="res://scenes/monster/hurt_box.gd" id="3_mqbw0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ycvgs"]
@@ -150,6 +151,8 @@ radius = 13.0384
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_x8yvf")
+medi_pack_gen_rate = 0.3
+health_item_scene = ExtResource("2_k4kms")
 
 [node name="Health" parent="." instance=ExtResource("2_i4nnb")]
 
