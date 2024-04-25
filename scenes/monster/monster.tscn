@@ -4,10 +4,7 @@
 [ext_resource type="Script" path="res://scenes/monster/monster.gd" id="1_x8yvf"]
 [ext_resource type="PackedScene" uid="uid://bcc4xlry1jmje" path="res://scenes/components/health/health.tscn" id="2_i4nnb"]
 [ext_resource type="PackedScene" uid="uid://bgt7ypro1fwrn" path="res://scenes/edible/medi_pack_item.tscn" id="2_k4kms"]
-[ext_resource type="Script" path="res://scenes/monster/hurt_box.gd" id="3_mqbw0"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_ycvgs"]
-radius = 18.0278
+[ext_resource type="Script" path="res://scenes/components/hurt_box/HurtBoxComponent.gd" id="6_l4kb5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2jq8y"]
 atlas = ExtResource("1_4q6ng")
@@ -147,6 +144,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_elrnc"]
 radius = 13.0384
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ffc0b"]
+radius = 18.6815
+
 [node name="Monster" type="RigidBody2D"]
 collision_layer = 2
 collision_mask = 2
@@ -155,16 +155,6 @@ medi_pack_gen_rate = 0.3
 health_item_scene = ExtResource("2_k4kms")
 
 [node name="Health" parent="." instance=ExtResource("2_i4nnb")]
-
-[node name="HurtBox" type="Area2D" parent="." node_paths=PackedStringArray("health")]
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("3_mqbw0")
-health = NodePath("../Health")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(0, -14)
-shape = SubResource("CircleShape2D_ycvgs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -17)
@@ -177,3 +167,13 @@ metadata/_edit_group_ = true
 position = Vector2(0, -14)
 shape = SubResource("CircleShape2D_elrnc")
 metadata/_edit_group_ = true
+
+[node name="HurtBoxComponent" type="Area2D" parent="." node_paths=PackedStringArray("health")]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("6_l4kb5")
+health = NodePath("../Health")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBoxComponent"]
+position = Vector2(0, -14)
+shape = SubResource("CircleShape2D_ffc0b")

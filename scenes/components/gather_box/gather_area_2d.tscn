@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cte7skejk7rfg"]
+
+[ext_resource type="Script" path="res://scenes/components/gather_box/gather_area_2d.gd" id="1_bc8vg"]
+
+[node name="GatherArea2D" type="Area2D"]
+gravity_space_override = 1
+gravity_point = true
+script = ExtResource("1_bc8vg")

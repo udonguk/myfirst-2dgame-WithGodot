@@ -10,5 +10,6 @@ func on_area_entered(area: Area2D):
 	if !area.get_parent().is_in_group("monsters"):
 		return
 	
-	var hurt_box = area as HurtBox
+
+	var hurt_box = area as HurtBoxComponent
 	hurt_box.addDemage(5)

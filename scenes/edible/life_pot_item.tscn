@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfiuww8vsuujh"]
+
+[ext_resource type="Texture2D" uid="uid://dim8p8k8hd7jt" path="res://resource/Items/Potion/LifePot.png" id="1_kfvh7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d4bw8"]
+
+[node name="LifePotItem" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kfvh7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_d4bw8")

@@ -228,5 +228,6 @@ collision_mask = 4
 script = ExtResource("5_6hwan")
 
 [node name="GatherSpotCollisionShape2D" type="CollisionShape2D" parent="GatherSpotArea2D"]
+visibility_layer = 4
 position = Vector2(0, -14)
 shape = SubResource("CircleShape2D_v64m1")
